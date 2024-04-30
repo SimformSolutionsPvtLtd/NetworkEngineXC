@@ -15,7 +15,7 @@ Once you have your Swift package set up, adding Alamofire as a dependency is as 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/mobile-simformsolutions/NetworkEngineXC.git", .upToNextMajor(from: "1.0.2"))
+    .package(url: "https://github.com/SimformSolutionsPvtLtd/NetworkEngineXC.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 ## Usage

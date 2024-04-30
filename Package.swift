@@ -20,7 +20,7 @@ let package = Package(
         .binaryTarget(
             name: "NetworkEngine",
             url: "https://github.com/SimformSolutionsPvtLtd/NetworkEngineXC/releases/download/v1.1.0/NetworkEngine.xcframework.zip",
-            checksum: "1a68287e41d028eb23b29e9e4c92d725dc78f801013a6411cc61dbec11a87fb9"
+            checksum: "d6356bda57e75409c0ede63192d586e13739060cfbecf32ccd934b7ef6a3cf79"
         )
     ]
 )

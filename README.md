@@ -149,9 +149,9 @@ case afError(_ afEror: AFError)
 This error is a wrapper on error thrown from Alamofire side
 
 ```swift
-case statusCode(_ statusCode: Int)
+case statusCode(_ statusCode: Int, _ data: Data?)
 ```
-Represents the errors with status codes
+Represents the errors with status codes and server data
 
 ```swift
 case serverError(_ data: Data)

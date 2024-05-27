@@ -3,7 +3,8 @@
 [![Swift 5.0][swift-badge]][swift-org]
 [![Swift Package Manager][spm-badge]][compatible-badge]
 
-Network engine is the networking framework on top of [Alamofire][alamofire], for simplified and testable network
+Network engine is the networking framework on top of [Alamofire][alamofire], for simplified and testable network.
+It supports combine (publishers pattern) and swift async await.
 
 ## Installation
 
@@ -15,7 +16,7 @@ Once you have your Swift package set up, adding Alamofire as a dependency is as 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/SimformSolutionsPvtLtd/NetworkEngineXC.git", .upToNextMajor(from: "1.1.0"))
+    .package(url: "https://github.com/SimformSolutionsPvtLtd/NetworkEngineXC.git", .upToNextMajor(from: "2.0.0"))
 ]
 ```
 ## Usage
@@ -144,29 +145,19 @@ Form a download request using given parameters and download the data using given
 Errors are thrown in form of `NetworkError`.
 
 ```swift
-case afError(_ afEror: AFError)
+case networkError(_ error: AFError, _ response: HTTPURLResponse?, _ data: Data?)
 ```
-This error is a wrapper on error thrown from Alamofire side
+This error is a wrapper on error thrown from Alamofire side with additional info
 
 ```swift
-case statusCode(_ statusCode: Int, _ data: Data?)
-```
-Represents the errors with status codes and server data
-
-```swift
-case serverError(_ data: Data)
-```
-Represents error with server data
-
-```swift
-case noInternetConnection
-```
-Thrown when `DefaultInterceptor` detects no internet on adaptation of network call
-
-```swift
-case encodableParameterFailure
+case encodableParameterFailure(error: Error)
 ```
 Thrown when `NetworkTask.requestParameterEncodable` fails to encode the given encodable in to request parameters.
+
+```swift
+case jsonDictionaryConversionFailed
+```
+Json to Dictionary conversion failed for URL parameter encoding
 
 # Writing Testable APIs
 

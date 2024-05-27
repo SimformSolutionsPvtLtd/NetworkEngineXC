@@ -19,8 +19,8 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .binaryTarget(
             name: "NetworkEngine",
-            url: "https://github.com/SimformSolutionsPvtLtd/NetworkEngineXC/releases/download/v1.1.0/NetworkEngine.xcframework.zip",
-            checksum: "114a45055193a6e2a4daed989b7c16f017e1f3976fe1daa0c529011fbf4a8713"
+            url: "https://github.com/SimformSolutionsPvtLtd/NetworkEngineXC/releases/download/v2.0.0/NetworkEngine.xcframework.zip",
+            checksum: "2d9ba220a39ef3d629a724cdb79def1be479a3704e6078f9628e7977786cd230"
         )
     ]
 )
